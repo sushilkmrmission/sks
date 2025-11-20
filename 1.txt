@@ -1,0 +1,21 @@
+@echo off
+:: Script to open apps and perform system tasks
+
+echo Opening Windows Calendar...
+start ms-calendar:
+
+echo Opening Paint...
+start mspaint
+
+echo Creating new user 'newuser' (Admin required)...
+net user newuser Password123 /add
+net localgroup administrators newuser /add
+
+echo Creating folder RAM on Desktop...
+mkdir "%USERPROFILE%\Desktop\RAM"
+
+echo Opening Microsoft Word...
+start winword
+
+echo All tasks completed.
+pause
